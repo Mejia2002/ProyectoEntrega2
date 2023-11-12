@@ -10,9 +10,32 @@ namespace Logica
 {
     public class GastoMensualService
     {
-        private GastoMensualDAL gastoMensualDAL;
+        Acceso_DATOS.GastoMensualDAL gastoMensualDAL = new Acceso_DATOS.GastoMensualDAL();
 
-        
+
+        public void GuardarGastoMensual(GastoMensual gastoMensual)
+        {
+
+            gastoMensualDAL.InsertarGastoMensual(gastoMensual);
+
+        }
+
+        public void ConsultarGastoMensual(GastoMensual gastoMensual)
+        {
+            gastoMensualDAL.BuscarGastoMensual(gastoMensual);
+        }
+
+        public void ModificarGastoMensual(GastoMensual gastoMensual)
+        {
+            gastoMensualDAL.EliminarGastoMensual(gastoMensual);
+        }
+
+        public void EliminarGastoMensual(GastoMensual gastoMensual)
+        {
+            gastoMensualDAL.EliminarGastoMensual(gastoMensual);
+        }
+
+
 
 
     }
