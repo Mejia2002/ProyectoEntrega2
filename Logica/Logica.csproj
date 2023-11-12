@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="EmpleadosService.cs" />
     <Compile Include="FacturaService.cs" />
+    <Compile Include="GananciaService.cs" />
+    <Compile Include="GastoMensualService.cs" />
+    <Compile Include="GastoOtrosInsumosService.cs" />
     <Compile Include="LiquidacionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
