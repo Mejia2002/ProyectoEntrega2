@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    internal class GastoOtrosInsumosService
+    public class GastoOtrosInsumosService
     {
+
+
+
     }
 }

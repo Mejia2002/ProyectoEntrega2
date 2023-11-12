@@ -8,5 +8,9 @@ namespace Logica
 {
     public class GananciaService
     {
+
+
+
+
     }
 }
