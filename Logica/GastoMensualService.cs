@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Acceso_DATOS;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,9 @@ namespace Logica
 {
     public class GastoMensualService
     {
+        private GastoMensualDAL gastoMensualDAL;
 
+        
 
 
     }
