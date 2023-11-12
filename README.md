@@ -1,8 +1,3 @@
-
-|-------------------------------------------|
-|                                           |  
-|        Sistema de Gestion gastos          |
-|                                           |
-|      Aqui se visualiza el trabajo         |
-|              Colaborativo                 |
-|-------------------------------------------|
+Sistema de Gestion gastos   
+Aqui se visualiaza el trabajo Colaborativo:
+Oviedo92
