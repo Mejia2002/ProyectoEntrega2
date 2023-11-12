@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpleadosService.cs" />
     <Compile Include="FacturaService.cs" />
     <Compile Include="LiquidacionService.cs" />
-    <Compile Include="EmpleadoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

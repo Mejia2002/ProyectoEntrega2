@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archivo.cs" />
-    <Compile Include="RepositorioFactura.cs" />
-    <Compile Include="RepositorioLiquidacion.cs" />
-    <Compile Include="RepositorioEmpleado.cs" />
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="FacturaDAL.cs" />
+    <Compile Include="GananciaDAL.cs" />
+    <Compile Include="EmpleadoDAL.cs" />
+    <Compile Include="GastoMensualDAL.cs" />
+    <Compile Include="GastroOtrosInsumosDAL.cs" />
+    <Compile Include="LiquidacionDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
