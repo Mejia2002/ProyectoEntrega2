@@ -98,9 +98,9 @@ namespace GUI
             // Obtener el empleado seleccionado del DataGridView
             Empleado empleado = new Empleado
             {
-                Nombre = dataGridView1.CurrentRow.Cells[0].Value.ToString(),
-                Correo = dataGridView1.CurrentRow.Cells[1].Value.ToString(),
-                Identificacion = dataGridView1.CurrentRow.Cells[2].Value.ToString(),
+                Identificacion = dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                Nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                Correo = dataGridView1.CurrentRow.Cells[2].Value.ToString(),
                 Telefono = dataGridView1.CurrentRow.Cells[3].Value.ToString(),
                 SalarioBase = decimal.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()),
                 Bonifiacion = decimal.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()),
@@ -110,9 +110,9 @@ namespace GUI
             };
 
             // Mostrar los datos del empleado seleccionado en los TextBox
+            txtIdentificacion.Text = empleado.Identificacion;
             txtNombre.Text = empleado.Nombre;
             txtCorreo.Text = empleado.Correo;
-            txtIdentificacion.Text = empleado.Identificacion;
             txtTelefono.Text = empleado.Telefono;
             txtSalarioBase.Text = empleado.SalarioBase.ToString();
             txtBonificacion.Text = empleado.Bonifiacion.ToString();
@@ -126,8 +126,8 @@ namespace GUI
 
         }
 
-      
-            
+    
+
 
 
     }
