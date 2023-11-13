@@ -95,13 +95,39 @@ namespace GUI
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            // Obtener el empleado seleccionado del DataGridView
+            Empleado empleado = new Empleado
+            {
+                Nombre = dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                Correo = dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                Identificacion = dataGridView1.CurrentRow.Cells[2].Value.ToString(),
+                Telefono = dataGridView1.CurrentRow.Cells[3].Value.ToString(),
+                SalarioBase = decimal.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()),
+                Bonifiacion = decimal.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()),
+                MesE = int.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString()),
+                AñoE = int.Parse(dataGridView1.CurrentRow.Cells[7].Value.ToString()),
+                SalarioTotal = decimal.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString())
+            };
+
+            // Mostrar los datos del empleado seleccionado en los TextBox
+            txtNombre.Text = empleado.Nombre;
+            txtCorreo.Text = empleado.Correo;
+            txtIdentificacion.Text = empleado.Identificacion;
+            txtTelefono.Text = empleado.Telefono;
+            txtSalarioBase.Text = empleado.SalarioBase.ToString();
+            txtBonificacion.Text = empleado.Bonifiacion.ToString();
+            txtMes.Text = empleado.MesE.ToString();
+            txtAño.Text = empleado.AñoE.ToString();
+            txtSalarioTotal.Text = empleado.SalarioTotal.ToString();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           
 
         }
+
+      
+            
 
 
     }

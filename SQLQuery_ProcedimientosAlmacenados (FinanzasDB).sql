@@ -26,6 +26,7 @@ BEGIN
     END
 END;
 
+select * from Empleado
 
 CREATE PROCEDURE EliminarEmpleado
     @Identificacion NVARCHAR(50)

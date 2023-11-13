@@ -16,6 +16,8 @@ CREATE TABLE Empleado (
     SalarioTotal DECIMAL
 );
 
+select * from Empleado
+
 
 CREATE TABLE Factura (
     CodigoFactura NVARCHAR(50) PRIMARY KEY,
