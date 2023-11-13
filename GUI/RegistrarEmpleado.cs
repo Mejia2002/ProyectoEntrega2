@@ -15,9 +15,31 @@ namespace GUI
         public RegistrarEmpleado()
         {
             InitializeComponent();
+            txtSalarioBase.KeyPress += TextBox_KeyPress;
+            txtBonificacion.KeyPress += TextBox_KeyPress;
+            txtSalarioTotal.KeyPress += TextBox_KeyPress;
+            txtIdentificacion.KeyPress += TextBox_KeyPress;
+
+
+        }
+        
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y el punto decimal (si no hay uno ya)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+            // Permitir solo un punto decimal
+            if (e.KeyChar == '.' && ((TextBox)sender).Text.Contains("."))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void btnGuardar_Click(object sender, System.EventArgs e)
+        private void BtnGuardar_Click(object sender, System.EventArgs e)
         {
 
             try
@@ -73,7 +95,7 @@ namespace GUI
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             ActualizarDataGridView();
@@ -86,13 +108,13 @@ namespace GUI
             this.empleadoTableAdapter.Fill(this.finanzaDBDataSet.Empleado);
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void BtnModificar_Click(object sender, EventArgs e)
         {
             
           
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             // Obtener el empleado seleccionado del DataGridView
@@ -121,14 +143,32 @@ namespace GUI
             txtSalarioTotal.Text = empleado.SalarioTotal.ToString();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void BtnBuscar_Click(object sender, EventArgs e)
         {
 
         }
 
-    
+        private void BtnCalcularSalarioTotal_Click(object sender, EventArgs e)
+        {
+            // Manejo de errores por si los valores ingresados no son números válidos
+            if (!double.TryParse(txtSalarioBase.Text, out double salarioBase) ||
+                !double.TryParse(txtBonificacion.Text, out double porcentajeBonificacion))
+            {
+                MessageBox.Show("Por favor, ingrese valores numéricos válidos.");
+                return;
+            }
+
+            // Cálculo del salario total
+            double bonificacion = salarioBase * (porcentajeBonificacion / 100);
+            double salarioTotal = salarioBase + bonificacion;
+
+            // Mostrar el resultado en un MessageBox
+            MessageBox.Show($"Salario Base: {salarioBase:C}\nBonificación: {bonificacion:C}\nSalario Total: {salarioTotal:C}");
+        }
+
+       
 
 
-
+        
     }
 }
